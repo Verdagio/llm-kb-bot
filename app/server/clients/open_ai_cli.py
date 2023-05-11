@@ -21,8 +21,7 @@ class OpenAICli:
         openai.api_key = os.getenv('OPENAI_API_KEY')
         self.chatModel = 'gpt-3.5-turbo'
     
-    def chatCompletion(self, req: Req) -> Res:
-    
+    def chat_completion(self, req: Req) -> Res:
         res = openai.ChatCompletion.create(
             model=self.chatModel,
             messages=[{
@@ -30,5 +29,4 @@ class OpenAICli:
                 'content': req.prompt
             }]
         )
-        print(res)
         return res

@@ -21,6 +21,6 @@ class Server:
         
         @app.post('/api/v1/prompt')
         async def prompt(req: Req):
-            return open_ai_client.chatCompletion(req)
+            return open_ai_client.chat_completion(req)
         
         return app
