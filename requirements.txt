@@ -1,0 +1,9 @@
+openai
+chromadb
+scrapy
+pandas
+fastapi
+websockets
+uvicorn[standard]
+pydantic
+python-dotenv
